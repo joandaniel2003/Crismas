@@ -1,0 +1,264 @@
+:root {
+    --rojo: 2B616D;
+}
+
+@font-face {
+    font-family: old-london;
+    src: url(../fonts/old_london/OldLondon.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    padding: 30px 0;
+    background: linear-gradient(rgba(0, 0, 0, .75) 0%, rgba(198, 171, 219, 1) 100%);
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .Logotipo {
+    font-family: 'old-london', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 45px;
+}
+
+header nav a {
+    color: #234e57;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #0b191c;
+}
+
+
+
+.Descripcion {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .0) 0%, rgba(0, 0, 0, 1) 100%), url(../img/Fondo.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+}
+
+.Descripcion .contenedor {
+    margin: 0 auto;
+    margin-top: 6.25em;
+    margin-left: 10px;
+    max-width: 50%;
+    text-align: center;
+}
+
+.Descripcion .titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.Descripcion .des {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.contenedor-controles-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-controles-titulo h3 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.contenedor-controles-titulo .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-controles-titulo .indicadores button:hover,
+.contenedor-controles-titulo .indicadores button.activo {
+    background: red;
+}
+
+
+.Info {
+    margin-bottom: 70px;
+}
+
+.Info .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.Info .contenedor-principal .flecha-izquierda,
+.Info .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.Info .contenedor-principal .flecha-izquierda:hover,
+.Info .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.Info .contenedor-principal .flecha-izquierda {
+    left: 0;
+}
+
+.Info .contenedor-principal .flecha-derecha {
+    right: 0;
+}
+
+
+.Info .contenedor-carousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.Info .contenedor-carousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Info .contenedor-carousel .carousel .pagina {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+
+}
+
+.Info .contenedor-carousel .carousel .pagina.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.Info .contenedor-carousel .carousel .pagina img {
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%;
+
+}
+
+.Info .contenedor-carousel .carousel .pagina iframe {
+
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%;
+
+}
+
+.Info .contenedor-carousel .carousel .pagina h4 {
+    text-align: center;
+    size: 13px;
+    color: #000;
+}
+
+footer {
+    background: linear-gradient(rgba(250, 141, 98, .5) 0%, rgba(0, 0, 0, 1) 100%);
+    bottom: 0;
+    width: 100%;
+
+}
+
+footer .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 200px;
+}
+
+footer .contenedor a {
+    color: #AAA;
+    font-size: 25px;
+}
+
+.img1 {
+    height: 50px;
+    width: 50px;
+}
+
+footer nav a img {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    header .Logotipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Descripcion {
+        font-size: 14px;
+    }
+
+    .Descripcion .des {
+        max-width: 100%;
+    }
+
+    .Info .contenedor-carousel {
+        overflow: visible;
+    }
+
+    .Info .contenedor-carousel .carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .Info .indicadores,
+    .Info .flecha-izquierda,
+    .Info .flecha-derecha {
+        display: none;
+    }
+}
